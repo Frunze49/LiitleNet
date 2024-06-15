@@ -100,11 +100,13 @@ show spanning-tree vlan 10
 show spanning-tree vlan 20
 ```
 
-Увидим:
+Увидим только на главном коммутаторе:
 
 ```
 The bridge is the root
 ```
+
+В продолжение предыдущего пункта заметим, что на коммутаторе у второго клиента в деревьях STP как для vlan 10, так и для vlan 20 линк c коммутатором доступа первого клиента (интерфейс Gi0/1) считается альтернативным и заблокированным:
 
 8. Проверим на отказоустойчивость. Отключим по очереди каждый из трех линков и проверим, что
 9. клиенты могут пинговать друг друга.
@@ -116,9 +118,10 @@ The bridge is the root
    ![image](https://github.com/Frunze49/LiitleNet/assets/88929713/a345b3ae-c81f-4098-ac5f-8c05a42aec97)
 
 
-
+Везде увидим.
 
 ![image](https://github.com/Frunze49/LiitleNet/assets/88929713/2eb8c5b3-0169-41cf-b1ea-e6737aecbd96)
 
 ![image](https://github.com/Frunze49/LiitleNet/assets/88929713/2b2c59d2-f526-4134-9aa8-225f4d8797cc)
 
+Работа в EVE-NG была выполнена
