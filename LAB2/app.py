@@ -50,7 +50,7 @@ def mtu_get(host):
         elif process.returncode == 1:
             right = middle_value
         else:
-            print('Ping returns trash', file=sys.stderr)
+            print('Ping return code is trash', file=sys.stderr)
             exit(1)
     return left
 
@@ -62,7 +62,6 @@ def main():
     host = args.host
 
     if (check_validity(host)):
-        print("Take a seat and wait.")
         print('MTU for {} is {}'.format(host, mtu_get(host) + 28))
     else:
         exit(1)
